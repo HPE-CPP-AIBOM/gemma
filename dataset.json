@@ -1,0 +1,52 @@
+{
+  "dataset_name": "Gemma Training Dataset",
+  "dataset_description": "A large and diverse dataset used to train the Gemma family of large language models (LLMs). The dataset comprises approximately 6 trillion tokens from a variety of sources, with a focus on English language content.",
+  "data_sources": [
+    {
+      "source_name": "Web Documents",
+      "description": "A broad collection of web text designed to provide linguistic diversity and exposure to a wide range of topics and vocabulary. Primarily English-language content.",
+      "estimated_proportion": "High (Specific proportion not disclosed)"
+    },
+    {
+      "source_name": "Code",
+      "description": "A collection of source code from various programming languages.  This data helps the model learn syntax, patterns, and code-related reasoning.",
+      "estimated_proportion": "Medium (Specific proportion not disclosed)"
+    },
+    {
+      "source_name": "Mathematics",
+      "description": "Text and symbolic data related to mathematics.  This data helps the model learn logical reasoning and symbolic representation.",
+      "estimated_proportion": "Low (Specific proportion not disclosed)"
+    }
+  ],
+  "dataset_size": {
+    "total_tokens": 6000000000000,
+    "unit": "tokens"
+  },
+  "dataset_splits": [
+    {
+      "split_name": "Training Set",
+      "split_purpose": "Used for training the Gemma models.",
+      "split_size": "Presumably the entire dataset (6 trillion tokens)",
+      "format": "Plain text"
+    }
+  ],
+  "data_preprocessing": [
+    {
+      "step_name": "CSAM Filtering",
+      "description": "Rigorous filtering to remove Child Sexual Abuse Material from the dataset."
+    },
+    {
+      "step_name": "Sensitive Data Filtering",
+      "description": "Automated techniques to filter out personal information and other sensitive data."
+    },
+    {
+      "step_name": "Content Quality and Safety Filtering",
+      "description": "Filtering based on content quality and safety in line with defined policies. The nature of the quality and safety filters are not specified."
+    }
+  ],
+  "language": "English (Primarily)",
+  "intended_use": "Training large language models for text generation, question answering, summarization, and other NLP tasks.",
+  "known_biases": "Likely contains biases present in the original data sources (web documents, code, etc.).",
+  "license_information": "Likely custom Google license. Refer to the Gemma model's license terms for usage restrictions related to the training data. (Check the specific license agreement associated with Gemma.)",
+  "citation": "@article{gemma_2024,\n    title={Gemma},\n    url={https://www.kaggle.com/m/3301},\n    DOI={10.34740/KAGGLE/M/3301},\n    publisher={Kaggle},\n    author={Gemma Team, Thomas Mesnard and Cassidy Hardin and Robert Dadashi and Surya Bhupatiraju and Laurent Sifre and Morgane Rivière and Mihir Sanjay Kale and Juliette Love and Pouya Tafti and Léonard Hussenot and et al.},\n    year={2024}\n}"
+}
