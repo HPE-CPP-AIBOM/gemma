@@ -1,0 +1,88 @@
+{
+  "Model Name": "Gemma",
+  "Type": "Decoder-only Large Language Model",
+  "Model Version": "1.0, 1.1 (and potentially future versions) - Available in 2B and 7B parameter sizes (Gemma PT and Gemma IT)",
+  "Developer Name": "Google",
+  "License Information": "Check Gemma Prohibited Use Policy and Terms of Use on Kaggle",
+
+  "Model Architecture": {
+    "ML Model": "Transformer",
+    "Algorithm": "Self-Attention mechanism",
+    "Model Parameters": {
+      "Architecture": "Transformer Decoder",
+      "Number of Layers": "Varies (Not explicitly stated, but dependent on model size 2B or 7B. Expect more layers for the 7B model. See estimates.)",
+      "Number of Attention Heads": "Varies (Not explicitly stated, but dependent on model size. See estimates.)",
+      "Hidden Layer Size": "Varies (Not explicitly stated, but dependent on model size. See estimates.)",
+      "Number of Parameters": "2 Billion (2B) or 7 Billion (7B)",
+      "Vocabulary Size": "Not explicitly stated, but likely large to handle diverse text"
+    },
+     "Estimates" : {
+        "Gemma 2B": {
+          "Number of Layers": "16-24 layers",
+          "Hidden Layer Size": "2048 - 3072",
+          "Number of Attention Heads": "16-32 attention heads"
+        },
+        "Gemma 7B": {
+          "Number of Layers": "24 - 32 layers",
+          "Hidden Layer Size": "3072 - 4096",
+          "Number of Attention Heads": "32 - 64 attention heads"
+        }
+      }
+  },
+
+  "Input": "Text",
+  "Input Format": {
+    "Type": "Plain text",
+    "Encoding": "UTF-8",
+    "Example": "Input text..."
+  },
+
+  "Output": "Text",
+  "Output Format": {
+    "Type": "Plain text",
+    "Encoding": "UTF-8",
+    "Description": "Generated English-language text"
+  },
+
+  "Usage Scenarios": [
+    "Text generation (poems, scripts, code, marketing copy, email drafts)",
+    "Chatbots and Conversational AI",
+    "Text summarization",
+    "Natural Language Processing (NLP) Research",
+    "Language Learning Tools",
+    "Knowledge Exploration"
+  ],
+
+  "Limitations": [
+    "Potential for biases in training data to be reflected in output",
+    "May struggle with open-ended or highly complex tasks",
+    "Can struggle with language ambiguity and nuance (sarcasm, figurative language)",
+    "May generate incorrect or outdated factual statements",
+    "May lack common sense reasoning",
+    "Potential misuse for generating false, misleading, or harmful content"
+  ],
+  "Training Data": {
+    "Sources": [
+      "Web Documents (primarily English)",
+      "Code",
+      "Mathematics"
+    ],
+    "Size": "6 trillion tokens",
+    "Preprocessing": [
+      "CSAM Filtering",
+      "Sensitive Data Filtering (personal information)",
+      "Content quality and safety filtering"
+    ]
+  },
+  "Training Hardware": "Tensor Processing Unit (TPUv5e)",
+  "Training Software": "JAX and ML Pathways",
+  "Ethics and Safety Evaluation": {
+    "Approach": [
+      "Structured evaluations",
+      "Internal red-teaming (content policies, representational harms, memorization, large-scale harm)",
+      "Benchmark against academic datasets (WinoBias, BBQ Dataset, etc.)"
+    ],
+    "Results": "Within acceptable thresholds for meeting internal policies for child safety, content safety, representational harms, memorization, large-scale harms (according to Google's internal policies)."
+  },
+    "Repository URL": "https://www.kaggle.com/models/google/gemma/frameworks/torch/variations"
+}
